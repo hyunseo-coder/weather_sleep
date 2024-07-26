@@ -1,5 +1,5 @@
 const weather = {
-  apiKey: "4327b7e43d737f405786d21089c71424", // OpenWeatherMap API 키 입력
+  apiKey: "", // OpenWeatherMap API 키 입력
   fetchWeather: function (city) {
     return fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apiKey}`
@@ -15,7 +15,7 @@ const weather = {
 const astronomy = {
   fetchAstronomyEvent: function () {
     return fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=fci0x37FNlH6WcAe9gVgj10XPEYlqQEy3Zp1bDDT` // NASA APOD API 키 입력
+      `https://api.nasa.gov/planetary/apod?api_key=` // NASA APOD API 키 입력
     ).then((response) => {
       if (!response.ok) {
         throw new Error("Astronomy event data not available");
